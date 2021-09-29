@@ -1,6 +1,7 @@
 #upload
 upload/
-
+#tmp
+tmp/
 # Logs
 logs
 *.log
