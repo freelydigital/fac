@@ -1,3 +1,9 @@
+#upload
+upload/*
+!upload/.gitkeep
+#tmp
+tmp/*
+!tmp/.gitkeep
 # Logs
 logs
 *.log

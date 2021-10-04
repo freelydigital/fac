@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  fac:
+    image: "kacperszo/filer-fac:latest"
+    ports:
+      - "3000:3000"
+    volumes:
+      - fac_upload:/app/upload
+    expose:
+      - "3000"
+    environment:
+      NODE_ENV: production
+      SECRET_KEY: secretkey
+    restart: always
+volumes:
+  fac_upload:
+    driver: local

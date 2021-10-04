@@ -7,6 +7,7 @@ import config from 'config';
 import express from 'express';
 import helmet from 'helmet';
 import hpp from 'hpp';
+import fileUpload from 'express-fileupload';
 import morgan from 'morgan';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
@@ -31,7 +32,7 @@ class App {
     this.app.listen(this.port, () => {
       logger.info(`=================================`);
       logger.info(`======= ENV: ${this.env} =======`);
-      logger.info(`🚀 App listening on the port ${this.port}`);
+      logger.info(`App listening on the port ${this.port}`);
       logger.info(`=================================`);
     });
   }
@@ -49,6 +50,7 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    this.app.use(fileUpload());
   }
 
   private initializeRoutes(routes: Routes[]) {

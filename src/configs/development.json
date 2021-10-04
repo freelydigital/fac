@@ -1,12 +1,11 @@
 {
     "env": "development",
-    "secretKey": "secretKey",
     "log": {
         "format": "dev",
         "dir": "../logs"
     },
     "cors": {
-        "origin": true,
+        "origin": "*",
         "credentials": true
     }
 }
