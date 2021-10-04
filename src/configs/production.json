@@ -1,6 +1,5 @@
 {
     "env": "production",
-    "secretKey": "secretkey",
     "log": {
         "format": "combined",
         "dir": "../logs"
